@@ -34,8 +34,6 @@
     "use_baseline": false,
     "use_timestamps": true,
     "use_temperature": true,
-    "con_temperature": true,
-    "make_prediction_timestamps": 10,
     "smoothing_factor": 4,
     "splits": [
         0.80,

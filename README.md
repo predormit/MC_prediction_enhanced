@@ -1,4 +1,5 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16840270.svg)](https://doi.org/10.5281/zenodo.16840270)
+
 # MC-prediction_enhanced
 ## Requirements
 The requirements are the same as those for MC prediction.
@@ -9,8 +10,6 @@ The requirements are the same as those for MC prediction.
 | metadata_date_col | "week_mean_temperature" |  Name of the column in the metadata that contains the sampling temperatures |
 | use_temperature | true | Whether to take the temperature into account as an additional variable for training the models. |
 | use_baseline | false | Whether to use baseline model. |
-| con_temperature | true | Whether to train the model using only data that contains temperature, but without using the temperature data itself. |
-| make_prediction_timestamps | 10 | The enhanced model outputs results for all four horizons by default, but the make_prediction_length option allows you to select which horizon’s data to use for making predictions，and only 1, 3, 5, and 10 can be selected.When "use_baseline" is true,  make_prediction_length has no effect. |
 
 ### If you want to use the baseline model, you can enable the option below.
 | Parameter | Default value |
@@ -25,10 +24,11 @@ The requirements are the same as those for MC prediction.
 | use_baseline | false |
 | use_timestamps | true|
 | use_temperature | true|
-| con_temperature | true |
 
 predict_timestamp can only set be 10 when use enhanced model
+
 # MC-prediction
+
 Predicting microbial community dynamics based on time series of continuous environmental samples by using graph neural network models. Developed and tested for activated sludge samples specifically, but can also be used for predicting the community dynamics in any other environment, but may require some adjustments. The implementation of the prediction model itself is primarily done in Python, but R is used for pre-formatting data and also for analyzing results.
 
 Published article here: https://www.nature.com/articles/s41467-025-64175-7
